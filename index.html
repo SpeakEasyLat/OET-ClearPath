@@ -1,409 +1,410 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OET ClearPath - Programa Estratégico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { margin: 0; padding: 0; background-color: #fff; }
-        
-        /* Estilos Globales y de la Sección 1 */
-        .oe-container {
-            font-family: 'Inter', sans-serif;
-            color: #334155;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        .oe-header-logos {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 20px auto 0;
-            padding: 0 20px;
-        }
-        /* Logo 5 veces más grande (Original era 60px -> Ahora 300px) */
-        .header-logo {
-            height: 300px; 
-            width: auto;
-        }
-        .whatsapp-btn-header {
-            background-color: #25D366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: transform 0.2s;
-        }
-        .whatsapp-btn-header:hover { transform: scale(1.05); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu CLEARPATH al OET | Speak Easy</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --blue:#0066CC;
+    --blue-dark:#001F5C;
+    --blue-mid:#005BAA;
+    --teal:#17A2B8;
+    --green:#28A745;
+    --light:#F4F9FF;
+    --text:#333;
+    --muted:#666;
+    --r:12px;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Tahoma,Geneva,sans-serif;color:var(--text);background:#fff;line-height:1.7}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:940px;margin:0 auto;padding:0 24px}
+  .section{padding:64px 0}
+  .section--alt{background:var(--light)}
+  .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  .section-title{font-size:clamp(22px,4vw,32px);font-weight:800;color:var(--blue);margin-bottom:14px;line-height:1.25}
+  .subtitle{font-size:16px;color:var(--muted);max-width:640px}
+  .divider{width:52px;height:4px;background:linear-gradient(90deg,var(--blue),var(--green));border-radius:2px;margin:12px 0 26px}
 
-        /* Botón Flotante WhatsApp Izquierda */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background-color: #25D366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 100;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#001F5C 0%,#005BAA 55%,#17A2B8 100%);padding:0;overflow:hidden;position:relative}
+  .hero-inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:70px 24px 60px;max-width:940px;margin:0 auto}
+  .hero-logo{width:200px;margin-bottom:28px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.25))}
+  .hero h1{font-size:clamp(24px,4vw,38px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:#4DDEBE}
+  .hero-sub{font-size:clamp(15px,2vw,17px);color:rgba(255,255,255,.88);margin-bottom:30px;line-height:1.65}
+  .hero-sub strong{color:#fff}
+  .btn{display:inline-block;padding:16px 38px;border-radius:50px;font-size:16px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s;text-align:center}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.22)}
+  .btn--cta{background:linear-gradient(135deg,#28A745,#17A2B8);color:#fff;box-shadow:0 4px 18px rgba(40,167,69,.35)}
+  .btn--white{background:#fff;color:var(--blue)}
+  .btn--white:hover{background:var(--green);color:#fff}
+  .hero-badge{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:12px;padding:18px 22px;backdrop-filter:blur(6px)}
+  .hero-badge p{color:rgba(255,255,255,.9);font-size:14px;line-height:1.6}
+  .hero-badge strong{color:#4DDEBE;font-size:16px;display:block;margin-bottom:6px}
+  .hero-visual{position:relative;text-align:center}
+  .hero-visual img{border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.35);width:100%}
+  .hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:30px;margin-bottom:20px;backdrop-filter:blur(4px)}
+  .hero-pill span{width:8px;height:8px;border-radius:50%;background:#4DDEBE;display:inline-block;animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
 
-        .oe-label {
-            color: #2b6cb0;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .oe-title {
-            color: #2b6cb0;
-            font-size: 42px;
-            font-weight: 800;
-            margin: 0 0 10px 0;
-            line-height: 1.2;
-        }
-        .oe-divider {
-            width: 60px;
-            height: 5px;
-            background: linear-gradient(90deg, #2b6cb0 50%, #48bb78 50%);
-            margin-bottom: 30px;
-        }
-        .oe-text {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .oe-list {
-            list-style: none;
-            padding: 0;
-        }
-        .oe-list-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 17px;
-        }
-        .oe-icon-check {
-            background-color: #3182ce;
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-            font-weight: bold;
-        }
+  /* URGENCY BAR */
+  .urgency-bar{background:linear-gradient(90deg,var(--blue-dark),var(--blue));padding:14px 24px;text-align:center}
+  .urgency-bar p{color:#fff;font-size:14px;font-weight:600;letter-spacing:.3px}
+  .urgency-bar span{color:#4DDEBE}
 
-        /* Sección Pasos a Seguir */
-        .steps-section { 
-            font-family: 'Inter', sans-serif; 
-            max-width: 1200px; 
-            margin: 60px auto; 
-            padding: 20px;
-            text-align: center;
-        }
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        .step-card {
-            background: white; 
-            border: 1px solid #e2e8f0; 
-            border-radius: 20px;
-            padding: 35px 25px; 
-            display: flex; 
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-        .step-card.final-step {
-            grid-column: 1 / -1; 
-            max-width: 500px;    
-            margin: 0 auto;      
-            background: #f0fff4; 
-            border: 2px solid #48bb78;
-        }
-        .step-number {
-            width: 50px; height: 50px; border-radius: 50%; 
-            background: #3182ce; color: white;
-            display: flex; align-items: center; justify-content: center; 
-            font-weight: 800; font-size: 20px; margin-bottom: 20px;
-        }
-        .final-step .step-number { background: #48bb78; }
-        .step-title { color: #2b6cb0; font-weight: 800; font-size: 20px; margin-bottom: 12px; }
-        .step-desc { color: #64748b; font-size: 15px; line-height: 1.6; }
+  /* BODY COPY */
+  .body-intro{padding:60px 0}
+  .body-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,102,204,.1);padding:42px;margin-bottom:32px;border-left:5px solid var(--blue)}
+  .body-card p{font-size:16px;color:var(--text);margin-bottom:14px;line-height:1.75}
+  .body-card p:last-child{margin-bottom:0}
+  .body-card .saludo{font-size:18px;font-weight:700;color:var(--blue);margin-bottom:16px}
+  .reality-title{font-size:18px;font-weight:800;color:var(--blue);margin:24px 0 14px}
+  .x-list{list-style:none;margin:0 0 22px}
+  .x-list li{font-size:15px;padding:9px 0;border-bottom:1px solid #f0f4ff;display:flex;align-items:flex-start;gap:10px}
+  .x-list li:last-child{border-bottom:none}
+  .oet-list{list-style:none;margin:14px 0 20px}
+  .oet-list li{display:flex;align-items:center;gap:12px;padding:8px 0;font-size:15px;border-bottom:1px solid #f0f4ff}
+  .oet-list li:last-child{border-bottom:none}
+  .oet-list li::before{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));flex-shrink:0}
+  .callout{background:linear-gradient(135deg,#f0f8ff,#e8fff4);border-radius:14px;padding:26px 30px;margin:28px 0;border-left:4px solid var(--green)}
+  .callout p{font-size:16px;color:var(--text);line-height:1.7;margin:0}
+  .callout strong{color:var(--blue)}
 
-        /* Sección Precio Assessment */
-        .price-container {
-            margin-top: 40px;
-            padding: 40px;
-            background: #f8fafc;
-            border-radius: 30px;
-            max-width: 1000px;
-            margin: 40px auto;
-            text-align: center;
-        }
-        .price-button-assessment {
-            background: linear-gradient(135deg, #4a6fa5, #355c7d);
-            color: white;
-            padding: 18px 50px;
-            border-radius: 50px;
-            font-size: 28px;
-            font-weight: 800;
-            display: inline-block;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
+  /* PASOS */
+  .paso-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,102,204,.08);border:1.5px solid #e0eefe;margin-bottom:24px;transition:transform .2s,box-shadow .2s}
+  .paso-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,102,204,.15)}
+  .paso-header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .paso-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .paso-title{font-size:18px;font-weight:800;color:var(--blue)}
+  .paso-emoji{font-size:22px}
+  .paso-body p{font-size:15px;color:var(--text);margin-bottom:10px;line-height:1.7}
+  .paso-body p:last-child{margin-bottom:0}
+  .check-list{list-style:none;margin:12px 0}
+  .check-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:14px;border-bottom:1px solid #f0f4ff;line-height:1.5}
+  .check-list li:last-child{border-bottom:none}
+  .pin-list{list-style:none;margin:12px 0}
+  .pin-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;font-size:14px;border-bottom:1px solid #f0f4ff;line-height:1.5}
+  .pin-list li:last-child{border-bottom:none}
+  .step-note{background:linear-gradient(135deg,#e8f5e9,#e0f7f4);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:14px;font-weight:600;color:var(--blue)}
 
-        /* Sección Pricing Packs */
-        .pricing-section { max-width: 1200px; margin: 60px auto; text-align: center; font-family: 'Inter', sans-serif;}
-        .pricing-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
-        .price-card-pack { 
-            background: white; border-radius: 24px; padding: 40px 30px; border: 1px solid #edf2f7;
-            flex: 1; min-width: 280px; max-width: 350px; display: flex; flex-direction: column;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-        }
-        .price-card-pack.popular { border: 2px solid #2b6cb0; transform: scale(1.05); background: #f0f7ff; }
-        .pack-price-num { font-size: 52px; font-weight: 800; margin-bottom: 10px; }
-        .cta-pack-btn { 
-            display: block; padding: 16px; border-radius: 12px; font-weight: 700; text-decoration: none;
-            margin-top: auto;
-        }
-        .btn-blue { background: #2b6cb0; color: white; }
-        .btn-gray { background: #f1f5f9; color: #475569; }
+  /* INVERSION */
+  .inversion-box{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid),var(--teal));border-radius:20px;padding:50px 40px;text-align:center;color:#fff;margin:50px 0}
+  .inv-price{display:inline-block;background:#fff;color:var(--blue);font-size:36px;font-weight:900;padding:16px 40px;border-radius:50px;margin:16px 0;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  .inv-note{font-size:15px;opacity:.9;max-width:580px;margin:0 auto 22px;line-height:1.7}
+  .bonus-tag{display:inline-block;background:linear-gradient(90deg,var(--green),var(--teal));color:#fff;font-size:13px;font-weight:700;padding:6px 18px;border-radius:30px;margin-bottom:12px;letter-spacing:1px}
+  .bonus-text{font-size:15px;opacity:.95;max-width:560px;margin:0 auto;line-height:1.7}
 
-        /* Banners CTA */
-        .cta-banner {
-            background: linear-gradient(90deg, #0072ce, #00b5d8);
-            padding: 60px 20px; text-align: center; color: white; font-family: 'Inter', sans-serif;
-            border-radius: 20px; margin: 40px auto; max-width: 1100px;
-        }
-        .cta-button-white {
-            background: white; color: #2b6cb0; padding: 15px 40px; border-radius: 50px;
-            text-decoration: none; font-weight: 700; font-size: 20px; display: inline-block;
-        }
+  /* QUIENES SOMOS */
+  .about-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .about-text p{font-size:15px;color:var(--text);margin-bottom:14px;line-height:1.75}
+  .cert-box{border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,102,204,.15);border:3px solid #e0eefe;background:#f8fbff;padding:20px;text-align:center}
+  .cert-box img{border-radius:10px;margin:0 auto}
+  .cert-label{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1.5px;margin-top:14px}
 
-        /* Bonos */
-        .bonos-section { font-family: 'Inter', sans-serif; max-width: 1200px; margin: 60px auto; padding: 20px; }
-        .bonos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .bono-card {
-            background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;
-            border-left: 5px solid #48bb78; text-align: left;
-        }
-        .bono-tag { background: #48bb78; color: white; padding: 4px 12px; border-radius: 8px; font-size: 12px; font-weight: 800; margin-bottom: 10px; display: inline-block; }
+  /* TESTIMONIOS */
+  .testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+  .testi-card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 4px 20px rgba(0,102,204,.08);border:1.5px solid #e0eefe;position:relative}
+  .testi-card::before{content:'"';font-size:80px;color:#e0eefe;font-family:Georgia,serif;position:absolute;top:-10px;left:20px;line-height:1}
+  .testi-text{font-size:15px;color:var(--text);line-height:1.75;font-style:italic;margin-bottom:18px;position:relative;z-index:1;padding-top:40px}
+  .testi-author{font-weight:800;color:var(--blue);font-size:14px}
+  .testi-role{font-size:13px;color:var(--muted)}
+  .stars{color:#F5B731;font-size:16px;margin-bottom:6px}
 
-        /* Condiciones */
-        .cond-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 40px; }
-        .cond-item { text-align: center; padding: 20px; }
-        .cond-icon-circle { width: 60px; height: 60px; background: #3182ce; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 24px; }
-        .reagendamiento-card { grid-column: 1 / -1; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 20px; padding: 30px; }
+  /* PARA TI / NO PARA TI */
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+  .fit-card{border-radius:16px;padding:28px}
+  .fit-card.yes{background:linear-gradient(135deg,#e8f5e9,#f0fff4);border:2px solid var(--green)}
+  .fit-card.no{background:linear-gradient(135deg,#fff5f5,#ffe8e8);border:2px solid #e74c3c}
+  .fit-card h3{font-size:17px;font-weight:800;margin-bottom:16px}
+  .fit-card.yes h3{color:var(--green)}
+  .fit-card.no h3{color:#e74c3c}
+  .fit-list{list-style:none}
+  .fit-list li{font-size:14px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);line-height:1.5;display:flex;align-items:flex-start;gap:8px}
+  .fit-list li:last-child{border-bottom:none}
 
-        /* Footer Logo Estilo Banner */
-        .footer-logo-container {
-            width: 100%;
-            text-align: center;
-            padding: 60px 0;
-            margin-top: 40px;
-            background-color: #f8fafc;
-        }
-        .footer-banner-logo {
-            max-width: 90%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
+  /* CTA FINAL */
+  .cta-final{background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid),var(--teal));border-radius:24px;padding:60px 40px;text-align:center;color:#fff;margin:54px 0}
+  .cta-final h2{font-size:clamp(20px,3.5vw,30px);font-weight:800;margin-bottom:12px}
+  .cta-final p{font-size:16px;opacity:.9;margin-bottom:8px}
+  .cta-cupos{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);border-radius:30px;padding:8px 22px;font-size:13px;font-weight:700;margin:14px 0 28px;letter-spacing:.5px}
+  .cupo-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#FF6B6B;margin-right:6px;animation:pulse 1.5s infinite}
 
-        @media (max-width: 768px) {
-            .steps-grid, .cond-grid { grid-template-columns: 1fr; }
-            .price-card-pack.popular { transform: scale(1); }
-            .oe-title { font-size: 30px; }
-            .oe-header-logos { flex-direction: column-reverse; gap: 30px; }
-            .header-logo { height: 150px; } /* Ajuste móvil */
-        }
-    </style>
+  /* POSTDATA */
+  .postdata{background:var(--light);border-radius:14px;padding:32px;margin:32px 0;border-left:4px solid var(--teal)}
+  .postdata p{font-size:15px;color:var(--text);margin-bottom:14px;line-height:1.7}
+  .postdata p:last-child{margin-bottom:0}
+
+  /* FOOTER */
+  .footer-bottom{background:#001432;color:rgba(255,255,255,.5);text-align:center;font-size:12px;padding:16px 24px}
+
+  @media(max-width:768px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero-visual{display:none}
+    .about-split,.testi-grid,.fit-grid{grid-template-columns:1fr}
+    .cta-final,.inversion-box{padding:36px 22px}
+    .paso-card{padding:24px}
+  }
+</style>
 </head>
 <body>
 
-    <!-- Botón Flotante WhatsApp Izquierda (Permanente) -->
-    <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="whatsapp-float" target="_blank">
-        <svg style="width:35px;height:35px" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.66 20.15 9.3 19.81 8.1 19.14L7.81 18.97L4.69 19.79L5.52 16.75L5.33 16.45C4.61 15.29 4.23 13.95 4.23 12.57C4.23 12.55 4.23 12.53 4.23 12.51C4.24 7.63 8.21 3.67 12.05 3.67M8.83 7.56C8.63 7.56 8.3 7.64 8.03 7.93C7.76 8.21 7 8.92 7 10.37C7 11.82 8.06 13.22 8.2 13.42C8.35 13.61 10.24 16.69 13.24 17.86C15.73 18.82 16.24 18.63 16.79 18.58C17.33 18.52 18.56 17.84 18.81 17.15C19.06 16.45 19.06 15.86 18.99 15.73C18.91 15.61 18.71 15.54 18.41 15.39C18.11 15.24 16.64 14.52 16.37 14.42C16.1 14.32 15.9 14.27 15.7 14.57C15.5 14.87 14.93 15.54 14.76 15.74C14.58 15.94 14.41 15.96 14.11 15.81C13.81 15.66 12.85 15.35 11.71 14.33C10.82 13.54 10.22 12.56 10.05 12.26C9.87 11.96 10.03 11.8 10.18 11.65C10.31 11.52 10.47 11.31 10.62 11.13C10.77 10.95 10.82 10.82 10.92 10.62C11.02 10.43 10.97 10.26 10.9 10.11C10.82 9.96 10.22 8.5 9.97 7.91C9.72 7.31 9.47 7.39 9.29 7.38C9.11 7.38 8.91 7.38 8.71 7.38" /></svg>
-    </a>
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <p>⏰ <span>Cupos limitados:</span> Solo <strong>5 evaluaciones por mes</strong> para garantizar análisis detallado</p>
+</div>
 
-    <!-- CABECERA: Logo Izquierda (Grande) y Botón WhatsApp Derecha -->
-    <div class="oe-header-logos">
-        <img src="https://raw.githubusercontent.com/SpeakEasyLat/OET-ClearPath/main/LOGO.png" alt="Speak Easy Logo" class="header-logo">
-        <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="whatsapp-btn-header" target="_blank">Contactar por WhatsApp</a>
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/0117208b-7adb-4a8e-acae-3e11cd25c66c" alt="ClearPath OET" class="hero-logo">
+      <div class="hero-pill"><span></span>Cupo para el Assessment disponible ahora</div>
+      <h1>¿Necesitas hacer el OET sin saber exactamente por dónde empezar a prepararlo?<br><em>Descubre tu ruta exacta para aprobar el OET a la primera, sin desperdiciar tiempo ni dinero.</em></h1>
+      <p class="hero-sub">Trabajas 10+ horas al día. No tienes tiempo que perder estudiando sin estructura.<br><strong>Tu CLEARPATH al OET</strong> te muestra exactamente qué hacer, cuándo y cómo; adaptado a <strong>TU nivel.</strong></p>
+      <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="btn btn--cta" target="_blank">QUIERO MI DIAGNÓSTICO PERSONALIZADO →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-badge">
+        <strong>🗺️ Tu CLEARPATH incluye:</strong>
+        <p>✅ Diagnóstico de las 4 secciones<br>✅ Nivel actual estimado<br>✅ Errores críticos identificados<br>✅ Plan de estudio personalizado<br>✅ Timeline estimado para tu caso</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BODY COPY -->
+<section class="body-intro">
+  <div class="container">
+    <div class="body-card">
+      <p class="saludo">Dr./Dra.,</p>
+      <p>Si estás leyendo esto, probablemente ya sabes que necesitas el OET para completar tu certificación ECFMG.</p>
+      <p>Puede que incluso pienses: <em>"Sé hablar inglés super bien, leo artículos en inglés, entiendo todo… ¿qué tan difícil puede ser el OET?"</em></p>
     </div>
 
-    <!-- SECCIÓN 1: INTRODUCCIÓN -->
-    <div class="oe-container">
-        <h1 class="oe-title">¿Qué es el Programa OET ClearPath?</h1>
-        <div class="oe-label">by Speak Easy</div>
-        <div class="oe-divider"></div>
-        <div class="oe-text">
-            Es un programa estratégico para dominar el OET, diseñado para <strong>médicos latinoamericanos con nivel de inglés B2-avanzado</strong> que desean ejercer su profesión en Estados Unidos.
+    <div class="reality-title">Aquí está la realidad que nadie te cuenta:</div>
+    <ul class="x-list">
+      <li>❌ <span>Saber inglés <strong>no es igual a</strong> Aprobar el OET</span></li>
+      <li>❌ <span>Ver videos en YouTube <strong> no es igual a </strong> Tener una estrategia clara</span></li>
+      <li>❌ <span>Estudiar "cuando tengo un momento" <strong> no es igual a </strong> Optimizar tu tiempo limitado</span></li>
+    </ul>
+
+    <div class="body-card" style="border-left-color:var(--teal)">
+      <p><strong>El OET no es solo un examen de inglés. Es un examen de:</strong></p>
+      <ul class="oet-list">
+        <li>Estrategia específica por cada sección</li>
+        <li>Dominio del formato y criterios de evaluación</li>
+        <li>Comunicación clínica bajo presión</li>
+        <li>Gestión del tiempo quirúrgica</li>
+      </ul>
+      <p>Y tú, trabajando en 2 hospitales y haciendo turnos en la clínica el fin de semana, no puedes darte el lujo de perder el tiempo estudiando a ciegas.</p>
+      <p>Sin un diagnóstico claro, estás navegando sin un mapa definido; sin tu CLEARPATH.</p>
+      <p><strong>Y cada mes que pierdes, es un Match que se aleja.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTA -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="tag">Presenta</span>
+    <h2 class="section-title">Tu CLEARPATH al OET</h2>
+    <div class="divider"></div>
+    <p class="subtitle" style="margin-bottom:12px"><strong>OET Assessment + Resultado Diagnóstico + Sesión de Q&A</strong></p>
+    <div class="callout">
+      <p>Así como nunca tratarías a un paciente sin hacer un diagnóstico primero, no puedes preparar el OET sin saber exactamente <strong>Dónde estás y qué necesitas.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section">
+  <div class="container">
+    <span class="tag">¿Cómo funciona?</span>
+    <h2 class="section-title">3 pasos hacia tu OET aprobado</h2>
+    <div class="divider"></div>
+
+    <div class="paso-card">
+      <div class="paso-header">
+        <div class="paso-num">1</div>
+        <div>
+          <div class="paso-emoji">📋</div>
+          <div class="paso-title">PASO 1: Evaluación Completa de las 4 Secciones</div>
         </div>
-        <div class="oe-text">
-            Contamos con el <strong style="color:#2b6cb0">certificado oficial OET Teaching Certificate</strong> otorgado por OET Teacher Training.
-        </div>
-        
-        <h1 class="oe-title" style="margin-top: 40px;">¿Qué lograrás con OET ClearPath?</h1>
-        <ul class="oe-list">
-            <li class="oe-list-item"><span class="oe-icon-check">✓</span> Entender los criterios y metodología de calificación</li>
-            <li class="oe-list-item"><span class="oe-icon-check">✓</span> Conocer el formato del examen y de cada subprueba</li>
-            <li class="oe-list-item"><span class="oe-icon-check">✓</span> Aprender estrategias clave para cada parte</li>
-            <li class="oe-list-item"><span class="oe-icon-check">✓</span> Eliminar los 10 errores más frecuentes</li>
-            <li class="oe-list-item"><span class="oe-icon-check">✓</span> Dominar las 4 subpruebas con estrategias probadas</li>
+      </div>
+      <div class="paso-body">
+        <p>Agendas un Assessment completo donde revisaremos:</p>
+        <ul class="check-list">
+          <li>✅ <span><strong>Listening:</strong> Identificamos si tu problema es vocabulario, velocidad o estrategia</span></li>
+          <li>✅ <span><strong>Reading:</strong> Evaluamos tu capacidad de extraer información clave bajo presión</span></li>
+          <li>✅ <span><strong>Writing:</strong> Analizamos estructura, tono profesional y precisión clínica</span></li>
+          <li>✅ <span><strong>Speaking:</strong> Simulamos un role-play real y evaluamos fluidez, comunicación y empatía</span></li>
         </ul>
+        <div class="step-note">⏱️ Tiempo total: 60 minutos de evaluación modelada con el formato OET</div>
+      </div>
     </div>
 
-    <!-- SECCIÓN 8: PASOS A SEGUIR -->
-    <div class="steps-section">
-        <span class="oe-label">TU PROCESO</span>
-        <h2 class="oe-title">Tu Camino al Éxito en el OET</h2>
-        <div class="oe-divider"></div>
-        
-        <div class="steps-grid">
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-title">OET Assessment</div>
-                <p class="step-desc">Evaluación de tu nivel actual en las 4 subpruebas del OET.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-title">Tu Mapa al OET</div>
-                <p class="step-desc">Recomendaciones de estudio personalizadas según tus necesidades.</p>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-title">Sesión Q&A en Vivo</div>
-                <p class="step-desc">Aclara todas tus dudas en una sesión en vivo antes de comenzar.</p>
-            </div>
-            <div class="step-card final-step">
-                <div class="step-number">4</div>
-                <div class="step-title">¡Empieza el Camino!</div>
-                <p class="step-desc">Elige tu pack de clases y comienza tu camino para <strong>aprobar el OET en el primer intento.</strong></p>
-            </div>
+    <div class="paso-card">
+      <div class="paso-header">
+        <div class="paso-num">2</div>
+        <div>
+          <div class="paso-emoji">🗺️</div>
+          <div class="paso-title">PASO 2: Recibe Tu CLEARPATH al OET Personalizado</div>
         </div>
+      </div>
+      <div class="paso-body">
+        <p>Dentro de 48 horas recibes tu <strong>Resultado Diagnóstico Completo</strong> que incluye:</p>
+        <ul class="pin-list">
+          <li>📍 <span>Tu nivel actual en cada sección (con puntaje estimado)</span></li>
+          <li>📍 <span>Análisis detallado de tus fortalezas y debilidades específicas</span></li>
+          <li>📍 <span>Identificación de errores críticos (los que te costarían puntos el día del examen)</span></li>
+          <li>📍 <span>Plan de estudio recomendado: qué estudiar, en qué orden</span></li>
+          <li>📍 <span>Timeline realista para tu caso particular</span></li>
+        </ul>
+        <div class="step-note">✨ Ya no adivinas. Ahora <strong>SABES.</strong></div>
+      </div>
+    </div>
 
-        <!-- VALOR DEL ASSESSMENT -->
-        <div class="price-container">
-            <div class="oe-label">VALOR DEL ASSESSMENT</div>
-            <div class="price-button-assessment">$150.000 COP</div>
-            <p class="step-desc">Tu Assessment se convierte en crédito aplicable al paquete de clases.</p>
+    <div class="paso-card">
+      <div class="paso-header">
+        <div class="paso-num">3</div>
+        <div>
+          <div class="paso-emoji">🎙️</div>
+          <div class="paso-title">PASO 3: Sesión Q&A en Vivo</div>
         </div>
+      </div>
+      <div class="paso-body">
+        <p>Te explicamos tu CLEARPATH al OET y aclaramos todas tus dudas en una sesión de 30 minutos en vivo.</p>
+        <ul class="check-list">
+          <li>🎓 <span>También conocerás nuestros packs de clases Speak Easy 1-1, donde navegaremos juntos tu CLEARPATH al OET bajo la guía experta de un profe certificado.</span></li>
+        </ul>
+        <div class="step-note">Decide con información clara el siguiente paso para aprobar el OET.</div>
+      </div>
     </div>
 
-    <!-- BANNER CTA -->
-    <div class="cta-banner">
-        <h2 class="oe-title" style="color:white">¿No estás seguro si estás listo?</h2>
-        <p style="font-size: 20px; margin-bottom: 30px;">Agenda tu Assessment ahora y recibe tu Mapa al OET personalizado</p>
-        <a href="https://wa.me/message/XO4SJBGKCGKRI1?text=Hola!%20Me%20gustaría%20agendar%20mi%20Assessment%20para%20conocer%20mi%20nivel%20de%20OET." class="cta-button-white" target="_blank">Quiero agendar mi Assessment</a>
+    <!-- CTA INTERMEDIO -->
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="btn btn--cta" target="_blank">QUIERO AGENDAR MI ASSESSMENT →</a>
+      <p style="font-size:13px;color:var(--muted);margin-top:12px">Resérvame un cupo para mi ClearPath al OET</p>
     </div>
+  </div>
+</section>
 
-    <!-- SECCIÓN: PACKS DE CLASES -->
-    <div class="pricing-section">
-        <h2 class="oe-title">Packs de Clases</h2>
-        <div class="oe-divider" style="margin: 20px auto"></div>
-        <div class="pricing-container">
-            <!-- Pack 12 -->
-            <div class="price-card-pack">
-                <div class="oe-label">Pack Inicial</div>
-                <div class="pack-price-num">12</div>
-                <p>Clases individuales</p>
-                <p style="font-size: 24px; font-weight: 800;">$1.199.000</p>
-                <a href="https://wa.me/message/XO4SJBGKCGKRI1?text=Hola!%20Me%20interesa%20el%20Pack%20Inicial%20de%2012%20clases." class="cta-pack-btn btn-gray" target="_blank">Elegir Pack x12</a>
-            </div>
-            <!-- Pack 24 -->
-            <div class="price-card-pack">
-                <div class="oe-label">Pack Intermedio</div>
-                <div class="pack-price-num">24</div>
-                <p>Clases individuales</p>
-                <p style="color: #94a3b8; text-decoration: line-through;">$2.398.000</p>
-                <p style="font-size: 24px; font-weight: 800; color: #2b6cb0;">Oferta: $1.799.000</p>
-                <a href="https://wa.me/message/XO4SJBGKCGKRI1?text=Hola!%20Quiero%20aprovechar%20la%20oferta%20del%20Pack%20Intermedio%20de%2024%20clases." class="cta-pack-btn btn-gray" target="_blank">Elegir Pack x24</a>
-            </div>
-            <!-- Pack 36 -->
-            <div class="price-card-pack popular">
-                <div class="bono-tag" style="position:absolute; top:-15px; left:50%; transform:translateX(-50%);">EL MÁS POPULAR</div>
-                <div class="oe-label">Pack Avanzado</div>
-                <div class="pack-price-num">36</div>
-                <p>Clases individuales</p>
-                <p style="color: #94a3b8; text-decoration: line-through;">$3.597.000</p>
-                <p style="font-size: 24px; font-weight: 800; color: #2b6cb0;">Oferta: $2.599.000</p>
-                <a href="https://wa.me/message/XO4SJBGKCGKRI1?text=Hola!%20Me%20gustaría%20inscribirme%20en%20el%20Pack%20Avanzado%20de%2036%20clases." class="cta-pack-btn btn-blue" target="_blank">Elegir Pack x36</a>
-            </div>
-        </div>
+<!-- INVERSION -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="inversion-box">
+      <span class="tag" style="color:#4DDEBE">Inversión</span>
+      <h2 style="font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:6px">¿Cuánto vale tu CLEARPATH al OET?</h2>
+      <div class="inv-price">$150.000 COP</div>
+      <p class="inv-note">Valor real: <strong>Invaluable</strong> cuando consideras que cada intento fallido del OET cuesta <strong>$600 USD</strong> + varios meses de estudio adicionales.</p>
+      <span class="bonus-tag">✨ BONUS ESPECIAL</span>
+      <p class="bonus-text">Si decides continuar con las clases personalizadas de Speak Easy, este valor se descuenta <strong>COMPLETO</strong> del paquete que elijas.<br><br>En otras palabras: <em>La evaluación es prácticamente <strong>GRATIS</strong> si continúas.</em><br>Y si decides estudiar por tu cuenta, te llevas el plan completo para hacerlo correctamente.</p>
+      <div style="margin-top:30px">
+        <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="btn btn--white" target="_blank">QUIERO ASEGURAR MI CUPO AHORA →</a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- SECCIÓN: BONOS -->
-    <div class="bonos-section">
-        <span class="oe-label">OFERTA ESPECIAL</span>
-        <h2 class="oe-title">Bonos de Regalo por Compra Anticipada</h2>
-        <div class="oe-divider"></div>
-        <div class="bonos-grid">
-            <div class="bono-card"><span class="bono-tag">Bono 1</span><div class="bono-title">Vocabulario Médico Completo</div></div>
-            <div class="bono-card"><span class="bono-tag">Bono 2</span><div class="bono-title">Guía de Autoestudio</div></div>
-            <div class="bono-card"><span class="bono-tag">Bono 3</span><div class="bono-title">Mini-curso de Gramática OET</div></div>
-            <div class="bono-card"><span class="bono-tag">Bono 4</span><div class="bono-title">Material Oficial de OET</div></div>
-        </div>
+<!-- QUIENES SOMOS -->
+<section class="section">
+  <div class="container">
+    <span class="tag">¿Quiénes somos?</span>
+    <h2 class="section-title">Speak Easy® — Tu aliado estratégico</h2>
+    <div class="divider"></div>
+    <div class="about-split">
+      <div class="about-text">
+        <p>Con más de 4 años de experiencia en la educación de idiomas online, <strong>Speak Easy®</strong> es un espacio de aprendizaje personalizado, donde tu progreso es nuestra prioridad. Somos diferentes porque adaptamos el proceso de aprendizaje a tus metas, tus intereses, tus necesidades y habilidades personales.</p>
+        <p>Contamos con el <strong style="color:var(--blue)">certificado oficial OET Teaching Certificate</strong> otorgado por OET Teacher Training, garantizando una preparación alineada con los estándares actuales del examen.</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- SECCIÓN: CONDICIONES -->
-    <div class="oe-container" style="text-align: center;">
-        <h2 class="oe-title">¿Cómo funcionan las clases?</h2>
-        <div class="oe-divider" style="margin: 20px auto;"></div>
-        <div class="cond-grid">
-            <div class="cond-item"><div class="cond-icon-circle">📅</div><div class="step-title">Frecuencia</div><p class="step-desc">3 clases por semana recomendadas.</p></div>
-            <div class="cond-item"><div class="cond-icon-circle">🕒</div><div class="step-title">Horarios</div><p class="step-desc">Lunes a viernes, 8am - 7pm.</p></div>
-            <div class="reagendamiento-card">
-                <div class="cond-icon-circle" style="background:#48bb78">🔄</div>
-                <div class="step-title">Reagendamiento</div>
-                <p class="step-desc">Avisando con 2 horas de anticipación puedes reprogramar.</p>
-            </div>
-        </div>
+<!-- TESTIMONIOS -->
+<section class="section section--alt">
+  <div class="container">
+    <span class="tag">Lo que opinan nuestros estudiantes</span>
+    <h2 class="section-title">Resultados reales, médicos reales</h2>
+    <div class="divider"></div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Recomendaría el curso porque cumple el objetivo de prepararse específicamente para el examen. Mi experiencia fue muy buena y me ayudó a cumplir mi objetivo. Resalto la calidad docente y humana de los profesores."</p>
+        <div class="testi-author">Dr. Felipe Lopera</div>
+        <div class="testi-role">Médico Radiólogo — Colombia</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Lo que más me ha gustado es la forma progresiva en la que ha ido avanzando en los temas y cómo los ha ido enlazando... Siento que así facilita mi comprensión y aprendizaje."</p>
+        <div class="testi-author">Dra. Diana López</div>
+        <div class="testi-role">Médico Radiólogo — Colombia</div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- BANNER FINAL -->
-    <div class="cta-banner" style="background: linear-gradient(90deg, #0072ce, #00b5d8); margin-top: 80px;">
-        <h2 class="oe-title" style="color:white">Aprueba el OET en el primer intento</h2>
-        <p style="font-size: 20px; margin-bottom: 30px;">Da el primer paso hoy. Agenda tu Assessment ahora.</p>
-        <a href="https://wa.me/message/XO4SJBGKCGKRI1?text=Hola!%20Deseo%20dar%20el%20primer%20paso%20y%20agendar%20mi%20OET%20Assessment." class="cta-button-white" target="_blank">Escribir por WhatsApp</a>
+<!-- PARA TI -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Seamos honestos…</h2>
+    <div class="divider"></div>
+    <div class="fit-grid">
+      <div class="fit-card yes">
+        <h3>✅ Esto es para ti si:</h3>
+        <ul class="fit-list">
+          <li>✅ <span>Tienes un nivel de inglés B2-avanzado o mayor</span></li>
+          <li>✅ <span>Ya estás en proceso de certificarte por el ECFMG</span></li>
+          <li>✅ <span>Sabes que necesitas el OET pero no has empezado a prepararte</span></li>
+          <li>✅ <span>Ya intentaste el OET una vez y no alcanzaste el puntaje</span></li>
+          <li>✅ <span>Quieres aprobar a la primera sin adivinar ni perder dinero</span></li>
+          <li>✅ <span>Necesitas claridad, no más confusión</span></li>
+        </ul>
+      </div>
+      <div class="fit-card no">
+        <h3>❌ Esto NO es para ti si:</h3>
+        <ul class="fit-list">
+          <li>❌ <span>Quieres una "solución mágica" sin esfuerzo</span></li>
+          <li>❌ <span>No estás dispuesto/a a invertir en tus objetivos profesionales</span></li>
+          <li>❌ <span>Prefieres seguir adivinando y probando recursos gratis</span></li>
+          <li>❌ <span>Todavía no estás decidido/a sobre el camino ECFMG</span></li>
+        </ul>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- BANNER VISUAL FINAL -->
-    <div style="margin-top:60px; text-align:center;">
-        <img 
-            src="https://cdn.jsdelivr.net/gh/SpeakEasyLat/OET-ClearPath@main/BANNER.png"
-            alt="OET ClearPath Banner"
-            style="width:100%; max-width:1200px; height:auto; border-radius:20px;"
-        >
+<!-- CTA FINAL -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta-final">
+      <h2>SÍ, QUIERO MI CLEARPATH AL OET</h2>
+      <p>Agenda tu OET Assessment ahora</p>
+      <div class="cta-cupos"><span class="cupo-dot"></span>Cupos limitados: Solo 5 evaluaciones por mes para garantizar análisis detallado y disponibilidad de clases Speak Easy</div>
+      <br>
+      <a href="https://wa.me/message/XO4SJBGKCGKRI1" class="btn btn--white" target="_blank" style="font-size:18px;padding:18px 46px">SÍ, QUIERO MI CLEARPATH AL OET →</a>
     </div>
+  </div>
+</section>
 
+<!-- POSTDATA -->
+<section class="section">
+  <div class="container">
+    <div class="postdata">
+      <p><strong>P.D.:</strong> Cada mes que pasa sin un plan claro, es un mes más lejos de tu Match. Los médicos que aprueban el OET a la primera no lo hacen por suerte; lo hacen con estrategia y claridad desde el día uno.</p>
+      <p><strong>P.P.D.:</strong> ¿Preguntas? Escríbeme directamente a <a href="https://wa.me/message/XO4SJBGKCGKRI1" style="color:var(--blue);font-weight:700;text-decoration:underline">WhatsApp</a>, te respondo personalmente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">2026 ClearPath OET by Speak Easy® — Todos los derechos reservados</div>
+</footer>
 
 </body>
 </html>
